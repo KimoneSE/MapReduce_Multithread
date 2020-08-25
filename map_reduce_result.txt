@@ -1875,7 +1875,7 @@ herald: 1
 heraldry: 2
 herb: 1
 hercules: 3
-here: 54
+here: 62
 hereafter: 1
 herein: 4
 herod: 1
@@ -3131,7 +3131,7 @@ quickly: 1
 quickness: 1
 quicksilver: 1
 quiddities: 1
-quiet: 4
+quiet: 5
 quietly: 1
 quietus: 1
 quillets: 1

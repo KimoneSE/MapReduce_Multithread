@@ -100,17 +100,17 @@ public class MapReduce_2 {
                 executorService.execute(()->{
                     for(Data data: part) {
                         String key = data.getKey();
-                        if(map.containsKey(key)) {
-                            List<String> listV = map.get(key);
+                        if(mapRes.containsKey(key)) {
+                            List<String> listV = mapRes.get(key);
                             listV.add(data.getValue());
-                            map.put(key,listV);
+                            mapRes.put(key,listV);
                         }else {
                             List<String> list = new ArrayList<>();
                             list.add("1");
-                            map.put(key, list);
+                            mapRes.put(key, list);
                         }
                     }
-                    mapRes.putAll(map);
+//                    mapRes.putAll(map);
                     latchShuffle.countDown();
                 });
             }
@@ -219,11 +219,4 @@ class Data{
         this.value = value;
     }
 
-    @Override
-    public String toString() {
-        return "Data{" +
-                "key='" + key + '\'' +
-                ", value='" + value + '\'' +
-                '}';
-    }
 }
